@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -153.6000000000021,
-    "scrollLeft": -141.5999999999994,
+    "scrollTop": -309.5999999999999,
+    "scrollLeft": -340.79999999999995,
     "zoomLevel": 0.8,
     "show": {
       "tableComment": true,
@@ -43,7 +43,7 @@
   "table": {
     "tables": [
       {
-        "name": "QuestionN",
+        "name": "QNum",
         "comment": "문항인수",
         "columns": [
           {
@@ -67,7 +67,7 @@
               "widthDataType": 60,
               "widthDefault": 60
             },
-            "id": "898f170f-e25c-4cc9-8320-3750f105dafc"
+            "id": "6d04e06e-fd80-4465-bd70-b5d712d11f61"
           },
           {
             "name": "Question",
@@ -78,7 +78,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -90,111 +90,26 @@
               "widthDataType": 89.29296875,
               "widthDefault": 60
             },
-            "id": "b7932364-583a-44f3-8b0b-d6e48b70399d"
-          }
-        ],
-        "ui": {
-          "active": true,
-          "left": 70.9559,
-          "top": 138.7556,
-          "zIndex": 26,
-          "widthName": 65.08935546875,
-          "widthComment": 60
-        },
-        "visible": true,
-        "id": "c4603cee-a62e-46ba-89e6-4412eec64346"
-      },
-      {
-        "name": "QAtable",
-        "comment": "설문지",
-        "columns": [
-          {
-            "name": "Qnum",
-            "comment": "",
-            "dataType": "INT",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 60,
-              "widthDataType": 60,
-              "widthDefault": 60
-            },
-            "id": "c790f6c2-16eb-4c0f-8c19-9848c777158e"
-          },
-          {
-            "name": "Anum",
-            "comment": "",
-            "dataType": "INT",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 60,
-              "widthDataType": 60,
-              "widthDefault": 60
-            },
-            "id": "f296ebf0-051f-48c4-96b5-b6e52a2acd0f"
-          },
-          {
-            "name": "QANum",
-            "comment": "",
-            "dataType": "INT",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": true,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": true,
-              "fk": false,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 60,
-              "widthDataType": 60,
-              "widthDefault": 60
-            },
-            "id": "e9d58068-6887-4456-beb2-2cfa68e7f043"
+            "id": "59c59e11-7155-4ed8-be75-7d71bbc1c07a"
           }
         ],
         "ui": {
           "active": false,
-          "left": 582.6,
-          "top": 203.622,
-          "zIndex": 14,
+          "left": 88.8,
+          "top": 100.8,
+          "zIndex": 81,
           "widthName": 60,
           "widthComment": 60
         },
         "visible": true,
-        "id": "0d7368f3-eed5-40da-9e1d-5eeb3db57350"
+        "id": "2c8a3536-5b4d-4bac-983d-b3848b56b915"
       },
       {
-        "name": "User",
+        "name": "UserID",
         "comment": "사용자명",
         "columns": [
           {
-            "name": "UserNum",
+            "name": "UID",
             "comment": "",
             "dataType": "INT",
             "default": "",
@@ -214,7 +129,7 @@
               "widthDataType": 60,
               "widthDefault": 60
             },
-            "id": "14f72f3b-160d-47c8-abd0-da00de1eebb2"
+            "id": "b5e58546-538b-492e-bffa-c6c749df0c50"
           },
           {
             "name": "Name",
@@ -237,26 +152,26 @@
               "widthDataType": 89.29296875,
               "widthDefault": 60
             },
-            "id": "1ecaa21b-1edb-4139-94f7-0649aab58a3a"
+            "id": "696313e2-0730-42bc-9ac9-fcb4cb1c5620"
           }
         ],
         "ui": {
           "active": false,
-          "left": 87,
-          "top": 469.2,
-          "zIndex": 21,
+          "left": 82.8,
+          "top": 432.4,
+          "zIndex": 64,
           "widthName": 60,
           "widthComment": 60
         },
         "visible": true,
-        "id": "e5f2967f-4e47-4c13-9ef5-c8dea341babb"
+        "id": "e98dd1c6-4797-480b-9d4c-1ecfd0a0aafc"
       },
       {
-        "name": "QAseq",
+        "name": "QA",
         "comment": "설문",
         "columns": [
           {
-            "name": "UserNum",
+            "name": "UID",
             "comment": "",
             "dataType": "INT",
             "default": "",
@@ -276,10 +191,10 @@
               "widthDataType": 60,
               "widthDefault": 60
             },
-            "id": "93b2cef8-3667-4f6c-94d9-d87bc2dfd344"
+            "id": "932477d1-d031-4982-aa01-c86b023d922b"
           },
           {
-            "name": "QANum",
+            "name": "Qnum",
             "comment": "",
             "dataType": "INT",
             "default": "",
@@ -299,28 +214,51 @@
               "widthDataType": 60,
               "widthDefault": 60
             },
-            "id": "df77abc0-7299-4809-a860-d4a754480fe6"
+            "id": "f08ad847-fde9-447c-9aba-85162c579ce3"
+          },
+          {
+            "name": "An",
+            "comment": "",
+            "dataType": "",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "629a9ee5-b3fa-48b0-9fc2-461575a6d302"
           }
         ],
         "ui": {
           "active": false,
-          "left": 584,
-          "top": 354.4,
-          "zIndex": 25,
+          "left": 701.2,
+          "top": 238.8,
+          "zIndex": 115,
           "widthName": 60,
           "widthComment": 60
         },
         "visible": true,
-        "id": "1d2b4385-f6b7-41ac-a7db-554e31c30ee3"
+        "id": "12304998-fc2d-4228-8195-20c3f4b03953"
       },
       {
-        "name": "AnswerN",
-        "comment": "답항",
+        "name": "A",
+        "comment": "",
         "columns": [
           {
-            "name": "Anum",
+            "name": "An",
             "comment": "",
-            "dataType": "INT",
+            "dataType": "",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -338,12 +276,12 @@
               "widthDataType": 60,
               "widthDefault": 60
             },
-            "id": "0a2c101c-1078-4f11-b1e2-0443aaca244d"
+            "id": "a020bfb5-915e-419b-9ae3-4f8e4a16cddc"
           },
           {
-            "name": "Answer",
+            "name": "A",
             "comment": "",
-            "dataType": "VARCHAR(200)",
+            "dataType": "",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -358,22 +296,22 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 60,
-              "widthDataType": 89.29296875,
+              "widthDataType": 60,
               "widthDefault": 60
             },
-            "id": "68f94b50-b7b6-490e-979a-bc453b67653d"
+            "id": "4f14e6e9-cb46-4eca-b40a-757ef2195bd5"
           }
         ],
         "ui": {
           "active": false,
-          "left": 1081.3337,
-          "top": 203.1111,
-          "zIndex": 19,
+          "left": 743.2,
+          "top": 508.4,
+          "zIndex": 113,
           "widthName": 60,
           "widthComment": 60
         },
         "visible": true,
-        "id": "0aa04aec-f740-4cdf-ae99-cea255447131"
+        "id": "b4ac3932-064f-4f15-8f25-852a612445b9"
       }
     ],
     "indexes": []
@@ -388,104 +326,78 @@
         "relationshipType": "OneN",
         "startRelationshipType": "Dash",
         "start": {
-          "tableId": "c4603cee-a62e-46ba-89e6-4412eec64346",
+          "tableId": "e98dd1c6-4797-480b-9d4c-1ecfd0a0aafc",
           "columnIds": [
-            "898f170f-e25c-4cc9-8320-3750f105dafc"
+            "b5e58546-538b-492e-bffa-c6c749df0c50"
           ],
-          "x": 447.24886875,
-          "y": 193.7556,
+          "x": 459.09296875,
+          "y": 487.4,
           "direction": "right"
         },
         "end": {
-          "tableId": "0d7368f3-eed5-40da-9e1d-5eeb3db57350",
+          "tableId": "12304998-fc2d-4228-8195-20c3f4b03953",
           "columnIds": [
-            "c790f6c2-16eb-4c0f-8c19-9848c777158e"
+            "932477d1-d031-4982-aa01-c86b023d922b"
           ],
-          "x": 582.6,
-          "y": 268.872,
+          "x": 701.2,
+          "y": 336.675,
           "direction": "left"
         },
-        "constraintName": "fk_문항인수_to_설문지",
+        "constraintName": "fk_userid_to_qa",
         "visible": true,
-        "id": "b79f6d52-be4a-48fd-a5d6-1ca5c0d6584b"
+        "id": "e64706f9-1092-434e-a9c4-14538c0fa047"
       },
       {
         "identification": false,
-        "relationshipType": "OneOnly",
+        "relationshipType": "ZeroN",
         "startRelationshipType": "Dash",
         "start": {
-          "tableId": "e5f2967f-4e47-4c13-9ef5-c8dea341babb",
+          "tableId": "2c8a3536-5b4d-4bac-983d-b3848b56b915",
           "columnIds": [
-            "14f72f3b-160d-47c8-abd0-da00de1eebb2"
+            "6d04e06e-fd80-4465-bd70-b5d712d11f61"
           ],
-          "x": 463.29296875,
-          "y": 524.2,
+          "x": 465.09296875,
+          "y": 155.8,
           "direction": "right"
         },
         "end": {
-          "tableId": "1d2b4385-f6b7-41ac-a7db-554e31c30ee3",
+          "tableId": "12304998-fc2d-4228-8195-20c3f4b03953",
           "columnIds": [
-            "93b2cef8-3667-4f6c-94d9-d87bc2dfd344"
+            "f08ad847-fde9-447c-9aba-85162c579ce3"
           ],
-          "x": 584,
-          "y": 409.4,
+          "x": 701.2,
+          "y": 271.425,
           "direction": "left"
         },
-        "constraintName": "fk_설문자_to_설문",
+        "constraintName": "fk_qnum_to_qa",
         "visible": true,
-        "id": "38e00906-ecc3-4000-91ee-2381babc4473"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneOnly",
-        "startRelationshipType": "Dash",
-        "start": {
-          "tableId": "0d7368f3-eed5-40da-9e1d-5eeb3db57350",
-          "columnIds": [
-            "e9d58068-6887-4456-beb2-2cfa68e7f043"
-          ],
-          "x": 756.1,
-          "y": 334.122,
-          "direction": "bottom"
-        },
-        "end": {
-          "tableId": "1d2b4385-f6b7-41ac-a7db-554e31c30ee3",
-          "columnIds": [
-            "df77abc0-7299-4809-a860-d4a754480fe6"
-          ],
-          "x": 757.5,
-          "y": 354.4,
-          "direction": "top"
-        },
-        "constraintName": "fk_설문지_to_설문",
-        "visible": true,
-        "id": "f431d3bd-23d3-4d12-90b3-7c349be5af58"
+        "id": "91d229fc-9a66-40b3-9c79-e43f41b0afac"
       },
       {
         "identification": false,
         "relationshipType": "OneN",
         "startRelationshipType": "Dash",
         "start": {
-          "tableId": "0aa04aec-f740-4cdf-ae99-cea255447131",
+          "tableId": "b4ac3932-064f-4f15-8f25-852a612445b9",
           "columnIds": [
-            "0a2c101c-1078-4f11-b1e2-0443aaca244d"
+            "a020bfb5-915e-419b-9ae3-4f8e4a16cddc"
           ],
-          "x": 1081.3337,
-          "y": 258.11109999999996,
-          "direction": "left"
+          "x": 916.7,
+          "y": 508.4,
+          "direction": "top"
         },
         "end": {
-          "tableId": "0d7368f3-eed5-40da-9e1d-5eeb3db57350",
+          "tableId": "12304998-fc2d-4228-8195-20c3f4b03953",
           "columnIds": [
-            "f296ebf0-051f-48c4-96b5-b6e52a2acd0f"
+            "629a9ee5-b3fa-48b0-9fc2-461575a6d302"
           ],
-          "x": 929.6,
-          "y": 268.872,
-          "direction": "right"
+          "x": 874.7,
+          "y": 369.3,
+          "direction": "bottom"
         },
-        "constraintName": "fk_답항_to_설문지",
+        "constraintName": "fk_a_to_qa",
         "visible": true,
-        "id": "3938432f-e8ef-478d-8887-e14cf31403f5"
+        "id": "7c928a27-6808-4a59-a1a6-635018adc8e6"
       }
     ]
   }
