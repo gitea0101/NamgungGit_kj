@@ -29,7 +29,7 @@ public class QAProjectPolls {
             //Answer 입력
             for(int i=0; i<4; i++){
                 QUERY = "Insert into answern (Anum, Answer) " +
-                        "values (" + i + ",'"+ Answer[i] + "') ";
+                        "values (" + i + ",'"+ Answer[i] + "')";
                 rs = stmt.executeQuery(QUERY);
             }
 
