@@ -3,6 +3,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
 
+import com.mysql.cj.Query;
+
 public class QAProjectPolls {
     Scanner scanner = new Scanner(System.in);
     
@@ -27,13 +29,22 @@ public class QAProjectPolls {
                 n=n+1;
             }
             
-            //Answer 입력
-            for(int i=0; i<4; i++){
-                QUERY = "Insert into answern (Anum, Answer) " +
-                        "values (" + i + ",'" + Answer[i] + "')";
-                        int val = stmt.executeUpdate(QUERY);
-            }
+            int n2 = 1; // AnswerN 저장 번호 변수 
 
+            //Answer 입력
+            String QUERY2 = "select * from answern";
+            ResultSet rs2 = stmt.executeQuery(QUERY2);
+            while(rs2.next()){
+                n2++;
+            }
+            for(int i =0; i<4; i++){
+                QUERY = "Insert into answern (Anum, Answer) " +
+                        "values (" + n2 + ",'" + Answer[i] + "')";
+                n2++;
+                n++;
+
+                int val = stmt.executeUpdate(QUERY);
+            }
             return 1;
         } catch (SQLException e) {
             e.printStackTrace();
