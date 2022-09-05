@@ -34,18 +34,25 @@ public class QAProjectPolls {
             //Answer 입력
             String QUERY2 = "select * from answern";
             ResultSet rs2 = stmt.executeQuery(QUERY2);
+            
             while(rs2.next()){
                 n2++;
             }
+            /* Count 함수를 써서 테이블 크기를 받는 방법?
+            String QUERY3 = "Select Count(*) from answern";
+            ResultSet rs3 = stmt.executeQuery(QUERY3);
+            n2 = rs3.getInt("Count(*)");
+            */
+
             for(int i =0; i<4; i++){
                 QUERY = "Insert into answern (Anum, Answer) " +
                         "values (" + n2 + ",'" + Answer[i] + "')";
                 n2++;
-                n++;
 
                 int val = stmt.executeUpdate(QUERY);
             }
             return 1;
+            
         } catch (SQLException e) {
             e.printStackTrace();
          }

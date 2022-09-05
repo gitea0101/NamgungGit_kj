@@ -5,7 +5,7 @@
     "height": 2000,
     "scrollTop": -226.40000000000208,
     "scrollLeft": -244.79999999999998,
-    "zoomLevel": 0.9,
+    "zoomLevel": 0.8,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -97,7 +97,7 @@
           "active": true,
           "left": 70.9559,
           "top": 138.7556,
-          "zIndex": 26,
+          "zIndex": 5,
           "widthName": 65.08935546875,
           "widthComment": 60
         },
@@ -182,7 +182,7 @@
           "active": false,
           "left": 582.6,
           "top": 203.622,
-          "zIndex": 10,
+          "zIndex": 2,
           "widthName": 60,
           "widthComment": 60
         },
@@ -244,7 +244,7 @@
           "active": false,
           "left": 87,
           "top": 469.2,
-          "zIndex": 21,
+          "zIndex": 4,
           "widthName": 60,
           "widthComment": 60
         },
@@ -306,7 +306,7 @@
           "active": false,
           "left": 592,
           "top": 470.4,
-          "zIndex": 8,
+          "zIndex": 1,
           "widthName": 60,
           "widthComment": 60
         },
@@ -368,7 +368,7 @@
           "active": false,
           "left": 1081.3337,
           "top": 203.1111,
-          "zIndex": 19,
+          "zIndex": 3,
           "widthName": 60,
           "widthComment": 60
         },
@@ -427,8 +427,8 @@
           "columnIds": [
             "93b2cef8-3667-4f6c-94d9-d87bc2dfd344"
           ],
-          "x": 584,
-          "y": 409.4,
+          "x": 592,
+          "y": 525.4,
           "direction": "left"
         },
         "constraintName": "fk_설문자_to_설문",
@@ -453,8 +453,8 @@
           "columnIds": [
             "df77abc0-7299-4809-a860-d4a754480fe6"
           ],
-          "x": 757.5,
-          "y": 354.4,
+          "x": 765.5,
+          "y": 470.4,
           "direction": "top"
         },
         "constraintName": "fk_설문지_to_설문",
