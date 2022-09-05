@@ -13,7 +13,16 @@ public class QAProjectPolls {
             String QUERY = "select * from questionn";
             ResultSet rs = stmt.executeQuery(QUERY);
 
-            System.out.println("설문");
+            System.out.println("아이디를 입력 해주세요.");
+            String UserID = scanner.nextLine(); // 유저 ID 변수
+
+            System.out.println("아이디를 입력 해주세요.");
+            String UserID = scanner.nextLine(); // 유저 ID 변수
+            
+            String QUERY2 = "Insert into User (UserNum, NAME)"
+                            "values (" + n2 + ",'" + UserName + "')";
+
+            ResultSet rs2 = stmt.executeQuery(QUERY2);
             
             int n = 0; // 응답 번호 변수
             
@@ -32,8 +41,8 @@ public class QAProjectPolls {
             int n2 = 1; // AnswerN 저장 번호 변수 
 
             //Answer 입력
-            String QUERY2 = "select * from answern";
-            ResultSet rs2 = stmt.executeQuery(QUERY2);
+            QUERY2 = "select * from answern";
+            rs2 = stmt.executeQuery(QUERY2);
             
             while(rs2.next()){
                 n2++;
