@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -269.60000000000014,
-    "scrollLeft": -177.59999999999994,
+    "scrollTop": -255.9999999999999,
+    "scrollLeft": -110.3999999999999,
     "zoomLevel": 0.8,
     "show": {
       "tableComment": true,
@@ -97,7 +97,7 @@
           "active": false,
           "left": 88.8,
           "top": 100.8,
-          "zIndex": 2,
+          "zIndex": 1,
           "widthName": 60,
           "widthComment": 60
         },
@@ -109,9 +109,9 @@
         "comment": "사용자명",
         "columns": [
           {
-            "name": "UID",
+            "name": "UserNum",
             "comment": "",
-            "dataType": "VARCHAR(200)",
+            "dataType": "INT",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -126,7 +126,7 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 60,
-              "widthDataType": 89.29296875,
+              "widthDataType": 60,
               "widthDefault": 60
             },
             "id": "b5e58546-538b-492e-bffa-c6c749df0c50"
@@ -159,7 +159,7 @@
           "active": false,
           "left": 82.8,
           "top": 432.4,
-          "zIndex": 28,
+          "zIndex": 32,
           "widthName": 60,
           "widthComment": 60
         },
@@ -171,9 +171,9 @@
         "comment": "설문",
         "columns": [
           {
-            "name": "UID",
+            "name": "UserNum",
             "comment": "",
-            "dataType": "VARCHAR(200)",
+            "dataType": "INT",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -188,7 +188,7 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 60,
-              "widthDataType": 89.29296875,
+              "widthDataType": 60,
               "widthDefault": 60
             },
             "id": "932477d1-d031-4982-aa01-c86b023d922b"
@@ -244,7 +244,7 @@
           "active": false,
           "left": 701.2,
           "top": 238.8,
-          "zIndex": 4,
+          "zIndex": 26,
           "widthName": 60,
           "widthComment": 60
         },
@@ -306,7 +306,7 @@
           "active": false,
           "left": 743.2,
           "top": 508.4,
-          "zIndex": 32,
+          "zIndex": 4,
           "widthName": 60,
           "widthComment": 60
         },
