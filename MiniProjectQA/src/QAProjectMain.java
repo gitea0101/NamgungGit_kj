@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class QAProjectMain {
     public static void main (String[] args){
-        final String DB_URL = "jdbc:mysql://localhost/survey_team";
+        final String DB_URL = "jdbc:mysql://localhost/data_biz_polls";
         final String USER = "root";
         final String PASS = "tbrs00002b";
         String QUERY = "";
@@ -36,7 +36,7 @@ public class QAProjectMain {
                         val = statics.StaticsFunction();
                         break;
                     case "P":
-                        val = polls.PollFunction();
+                        val = polls.PollFunction(stmt);
                         break;
                     case "Q":
                         END = false;
@@ -48,6 +48,6 @@ public class QAProjectMain {
              e.printStackTrace();
           } 
 
-          
+    scanner.close();    
     }
 }
