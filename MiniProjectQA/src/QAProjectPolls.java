@@ -24,13 +24,14 @@ public class QAProjectPolls {
                 System.out.println(rs.getString("Question"));
                 System.out.println("1.만족한다. 2.보통 이다. 3.불만이다.");
                 Answer[n] = scanner.nextLine(); // 응답 변수
+                n=n+1;
             }
             
             //Answer 입력
             for(int i=0; i<4; i++){
                 QUERY = "Insert into answern (Anum, Answer) " +
-                        "values (" + i + ",'"+ Answer[i] + "')";
-                rs = stmt.executeQuery(QUERY);
+                        "values (" + i + ",'" + Answer[i] + "')";
+                        int val = stmt.executeUpdate(QUERY);
             }
 
             return 1;
