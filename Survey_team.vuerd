@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -226.40000000000208,
-    "scrollLeft": -244.79999999999998,
+    "scrollTop": -205.60000000000218,
+    "scrollLeft": -191.99999999999994,
     "zoomLevel": 0.8,
     "show": {
       "tableComment": true,
@@ -48,7 +48,7 @@
         "columns": [
           {
             "name": "Qnum",
-            "comment": "",
+            "comment": "문항인수",
             "dataType": "INT",
             "default": "",
             "option": {
@@ -71,7 +71,7 @@
           },
           {
             "name": "Question",
-            "comment": "",
+            "comment": "질문",
             "dataType": "VARCHAR(200)",
             "default": "",
             "option": {
@@ -94,10 +94,10 @@
           }
         ],
         "ui": {
-          "active": true,
+          "active": false,
           "left": 70.9559,
           "top": 138.7556,
-          "zIndex": 5,
+          "zIndex": 18,
           "widthName": 65.08935546875,
           "widthComment": 60
         },
@@ -182,7 +182,7 @@
           "active": false,
           "left": 582.6,
           "top": 203.622,
-          "zIndex": 2,
+          "zIndex": 16,
           "widthName": 60,
           "widthComment": 60
         },
@@ -195,7 +195,7 @@
         "columns": [
           {
             "name": "UserNum",
-            "comment": "",
+            "comment": "사용자번호",
             "dataType": "INT",
             "default": "",
             "option": {
@@ -210,7 +210,7 @@
               "fk": false,
               "pfk": false,
               "widthName": 60,
-              "widthComment": 60,
+              "widthComment": 67,
               "widthDataType": 60,
               "widthDefault": 60
             },
@@ -218,7 +218,7 @@
           },
           {
             "name": "Name",
-            "comment": "",
+            "comment": "이름",
             "dataType": "VARCHAR(200)",
             "default": "",
             "option": {
@@ -244,7 +244,7 @@
           "active": false,
           "left": 87,
           "top": 469.2,
-          "zIndex": 4,
+          "zIndex": 14,
           "widthName": 60,
           "widthComment": 60
         },
@@ -257,7 +257,7 @@
         "columns": [
           {
             "name": "UserNum",
-            "comment": "",
+            "comment": "사용자번호",
             "dataType": "INT",
             "default": "",
             "option": {
@@ -272,7 +272,7 @@
               "fk": true,
               "pfk": false,
               "widthName": 60,
-              "widthComment": 60,
+              "widthComment": 67,
               "widthDataType": 60,
               "widthDefault": 60
             },
@@ -280,7 +280,7 @@
           },
           {
             "name": "QANum",
-            "comment": "",
+            "comment": "결과",
             "dataType": "INT",
             "default": "",
             "option": {
@@ -306,7 +306,7 @@
           "active": false,
           "left": 592,
           "top": 470.4,
-          "zIndex": 1,
+          "zIndex": 22,
           "widthName": 60,
           "widthComment": 60
         },
@@ -411,14 +411,14 @@
       },
       {
         "identification": false,
-        "relationshipType": "OneOnly",
+        "relationshipType": "OneN",
         "startRelationshipType": "Dash",
         "start": {
           "tableId": "e5f2967f-4e47-4c13-9ef5-c8dea341babb",
           "columnIds": [
             "14f72f3b-160d-47c8-abd0-da00de1eebb2"
           ],
-          "x": 463.29296875,
+          "x": 470.29296875,
           "y": 524.2,
           "direction": "right"
         },
@@ -437,7 +437,7 @@
       },
       {
         "identification": false,
-        "relationshipType": "OneOnly",
+        "relationshipType": "ZeroN",
         "startRelationshipType": "Dash",
         "start": {
           "tableId": "0d7368f3-eed5-40da-9e1d-5eeb3db57350",
@@ -453,7 +453,7 @@
           "columnIds": [
             "df77abc0-7299-4809-a860-d4a754480fe6"
           ],
-          "x": 765.5,
+          "x": 769,
           "y": 470.4,
           "direction": "top"
         },
