@@ -11,7 +11,7 @@ public class QAProjectPolls {
     public int PollFunction(Statement stmt){
         try {
             String QUERY = "select * from questionn";
-            String QUERY2 = "select * from "
+            String QUERY2 = "select * from AnswerN";
             ResultSet rs = stmt.executeQuery(QUERY);
             ResultSet rs2 = stmt.executeQuery(QUERY2);
 
@@ -29,7 +29,11 @@ public class QAProjectPolls {
                 // Retrieve by column name
                 System.out.println("Qnum: " + rs.getString("Qnum"));
                 System.out.println(rs.getString("Question"));
-                System.out.println("1.만족한다. 2.보통 이다. 3.불만이다.");
+                while(rs2.next()){
+                    int a = 1;
+                    System.out.print( a + "." + rs2.getString("Answer") +" ");
+                    a++;
+                }
                 Answer[n] = scanner.nextLine(); // 응답 변수
                 n=n+1;
             }
@@ -41,7 +45,7 @@ public class QAProjectPolls {
             QUERY2 = "Insert into User (UserNum, NAME)" +
                             "values (" + n2 + ",'" + UserNum + "')";
             
-            ResultSet rs2 = stmt.executeQuery(QUERY2);
+            rs2 = stmt.executeQuery(QUERY2);
 
             while(rs2.next()){
                 n2++;
