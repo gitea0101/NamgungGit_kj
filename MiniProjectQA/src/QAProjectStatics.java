@@ -18,6 +18,7 @@ public class QAProjectStatics {
     }
 
     public int sumAnsFunction(Statement stmt) throws SQLException{//답변의 합
+        System.out.println("질문별 선택된 답변 개수");
         ResultSet rs = stmt.executeQuery(QUERY);
         QUERY = "SELECT QNUM " +
                 ",count(case when Anum=1  then 1 end) as A1 " +
@@ -30,9 +31,9 @@ public class QAProjectStatics {
             // 데이터 타입, 갯수 일치
             // Retrieve by column name
             System.out.print("질문 번호 : " + rs.getInt("QNUM"));
-            System.out.print("   1번 : " + rs.getString("A1"));
-            System.out.print("   2번 : " + rs.getString("A2"));
-            System.out.println("   3번 : " + rs.getString("A3"));
+            System.out.print("    1번 : " + rs.getString("A1"));
+            System.out.print("    2번 : " + rs.getString("A2"));
+            System.out.println("    3번 : " + rs.getString("A3"));
         }
         
 
