@@ -46,6 +46,45 @@ Values(3, '정지환')
 
 select * from user;
 
+insert into qatable(Qnum,Anum,QANum)
+values (1,1,1)
+;
+insert into qatable(Qnum,Anum,QANum)
+values (1,2,2)
+;
+insert into qatable(Qnum,Anum,QANum)
+values (1,3,3)
+;
+insert into qatable(Qnum,Anum,QANum)
+values (2,1,4)
+;
+insert into qatable(Qnum,Anum,QANum)
+values (2,2,5)
+;
+insert into qatable(Qnum,Anum,QANum)
+values (2,3,6)
+;
+insert into qatable(Qnum,Anum,QANum)
+values (3,1,7)
+;
+insert into qatable(Qnum,Anum,QANum)
+values (3,2,8)
+;
+insert into qatable(Qnum,Anum,QANum)
+values (3,3,9)
+;
+insert into qatable(Qnum,Anum,QANum)
+values (4,1,10)
+;
+insert into qatable(Qnum,Anum,QANum)
+values (4,2,11)
+;
+insert into qatable(Qnum,Anum,QANum)
+values (4,3,12)
+;
+
+
+select * from qatable;
 
 
 
