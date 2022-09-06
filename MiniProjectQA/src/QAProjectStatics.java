@@ -15,7 +15,7 @@ public class QAProjectStatics {
         while (rs.next()) {
             System.out.print("이름 : " + rs.getString("User.name"));
             System.out.print("    질문 번호 : " + rs.getInt("QAtable.Qnum"));
-            System.out.println("    1번 : " + rs.getInt("QAtable.Anum"));
+            System.out.println("    답변 번호 : " + rs.getInt("QAtable.Anum"));
         }
         return 1;
 
