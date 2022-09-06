@@ -1,7 +1,7 @@
 import java.sql.*;
 
 public class QAProjectStatics {
-    String QUERY = "select * from QAtable";
+    String QUERY = "";
 
     public int printAllStastics(Statement stmt) throws SQLException {
         QUERY = "select * from QAtable";
@@ -39,7 +39,14 @@ public class QAProjectStatics {
         return 1;
     }
 
-    public int sumUserFunction(){
+    public int sumUserFunction(Statement stmt) throws SQLException{
+        QUERY ="select Count(UserNum) from User";
+        ResultSet rs = stmt.executeQuery(QUERY);
+        rs = stmt.executeQuery(QUERY);
+
+        while (rs.next()) {
+            System.out.println("총 설문자 수 : " + rs.getInt("Count(UserNum)"));
+        }
         return 1;
     }
 }

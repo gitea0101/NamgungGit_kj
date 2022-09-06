@@ -47,7 +47,7 @@ public class QAProjectMain {
                         System.out.println("4.총 설문자수");
 
                         String MainInPut2 = scanner.nextLine();
-                        
+
                         if (MainInPut2.equals("1")){
                             val = statics.printAllStastics(stmt);
                         } else if (MainInPut2.equals("2")){
@@ -55,7 +55,7 @@ public class QAProjectMain {
                         } else if (MainInPut2.equals("3")){
                             
                         } else if (MainInPut2.equals("4")){
-
+                            val = statics.sumUserFunction(stmt);
                         }
                         
                         break;
