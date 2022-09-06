@@ -11,13 +11,12 @@ public class QAProjectStatics {
     }
 
     public int sumAnsFunction(Statement stmt) throws SQLException{//답변의 합
-        ResultSet rs = stmt.executeQuery(QUERY);
         QUERY = "SELECT QNUM " +
                 ",count(case when Anum=1  then 1 end) as A1 " +
                 ",count(case when Anum=2 then 1 end) as A2 " +
                 ",count(case when Anum=3 then 1 end) as A3 " +
                 "FROM qatable group by QNUM ";
-        
+        ResultSet rs = stmt.executeQuery(QUERY);
         rs = stmt.executeQuery(QUERY);
         while (rs.next()) {
             // 데이터 타입, 갯수 일치

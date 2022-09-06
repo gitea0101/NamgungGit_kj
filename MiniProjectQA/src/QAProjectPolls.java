@@ -35,20 +35,16 @@ public class QAProjectPolls {
                         a++;
                     }
 
-                    System.out.print("Q: 설문 종료");
-
+                    System.out.println("Q: 설문 종료");
+                    
                     Answer[n] = scanner.nextLine(); // 응답 변수
                     if (Answer[n].equals("Q")){
                         return 1;
                     }
-                    n=n+1;
-                    }
-                    
-                    for(int i=0;i<4;i++){
-                       if (Integer.parseInt(Answer[i]) > 3 || Integer.parseInt(Answer[i]) < 1 ){
+                    if (Integer.parseInt(Answer[n]) > 3 || Integer.parseInt(Answer[n]) < 1 ){
                         throw new Exception();
-                       }
-
+                    }
+                    n=n+1;
                 }
             } catch(Exception e){
                 System.out.println("1,2,3 중 하나를 입력해 주세요.");
