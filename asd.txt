@@ -1,0 +1,20 @@
+select
+Qnum
+,count(a1),count(a2),count(a3)
+from
+(select Qnum,
+ CASE
+	WHEN Anum = 1 THEN 1
+    ELSE Anum Is Null
+END AS a1
+,CASE
+	WHEN Anum = 2 THEN 1
+    ELSE Anum Is Null
+END AS a2
+,CASE
+	WHEN Anum = 3 THEN 1
+    ELSE Anum Is Null
+END AS a3
+from qatable) as a
+group by qnum
+;
