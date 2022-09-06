@@ -2,23 +2,15 @@ import java.sql.*;
 
 public class QAProjectStatics {
     String QUERY = "select * from QAtable";
-    
 
-    public int StaticsFunction(Statement stmt) throws SQLException{
+    public int printAllStastics(Statement stmt) throws SQLException {
+        QUERY = "select * from QAtable";
         ResultSet rs = stmt.executeQuery(QUERY);
-        QUERY = "select * from QAtable";
-        
-       return 1;
-    }
-    public int printAllStastics() {
-        QUERY = "select * from QAtable";
-
         return 1;
 
     }
 
     public int sumAnsFunction(Statement stmt) throws SQLException{//답변의 합
-        System.out.println("질문별 선택된 답변 개수");
         ResultSet rs = stmt.executeQuery(QUERY);
         QUERY = "SELECT QNUM " +
                 ",count(case when Anum=1  then 1 end) as A1 " +

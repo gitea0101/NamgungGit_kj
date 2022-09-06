@@ -41,13 +41,19 @@ public class QAProjectMain {
                 
                 switch(MainInPut){
                     case "S":
+                        System.out.println("1.설문결과 출력");
+                        System.out.println("2.질문별 선택된 답변 개수");
+                        System.out.println("3.질문별 가장많이 선택된 답변 개수");
+                        System.out.println("4.총 설문자수");
+
                         String MainInPut2 = scanner.nextLine();
+                        
                         if (MainInPut2.equals("1")){
-
+                            val = statics.printAllStastics(stmt);
                         } else if (MainInPut2.equals("2")){
-
-                        } else if (MainInPut2.equals("3")){
                             val = statics.sumAnsFunction(stmt);
+                        } else if (MainInPut2.equals("3")){
+                            
                         } else if (MainInPut2.equals("4")){
 
                         }
