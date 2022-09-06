@@ -11,7 +11,9 @@ public class QAProjectPolls {
     public int PollFunction(Statement stmt){
         try {
             String QUERY = "select * from questionn";
+            String QUERY2 = "select * from "
             ResultSet rs = stmt.executeQuery(QUERY);
+            ResultSet rs2 = stmt.executeQuery(QUERY2);
 
             System.out.println("이름을 입력해 주세요.");
             String UserName = scanner.nextLine(); // 유저 이름 변수
@@ -36,7 +38,7 @@ public class QAProjectPolls {
             int n2 = 1; // table 번호 변수 
             
             // UserNum 입력(이름이 없을때)
-            String QUERY2 = "Insert into User (UserNum, NAME)" +
+            QUERY2 = "Insert into User (UserNum, NAME)" +
                             "values (" + n2 + ",'" + UserNum + "')";
             
             ResultSet rs2 = stmt.executeQuery(QUERY2);
@@ -66,12 +68,21 @@ public class QAProjectPolls {
             */
 
             for(int i =0; i<4; i++){
-                QUERY = "Insert into answern (Anum, Answer) " +
+                QUERY = "Insert into answern (Anum, An) " +
                         "values (" + n2 + ",'" + Answer[i] + "')";
                 n2++;
 
                 val = stmt.executeUpdate(QUERY);
             }
+            //QA 데이터 입력
+
+            for(int i =0; i<4; i++){
+                QUERY = "Insert into QA (QAnum, UserNum, Qnum, An) " +
+                        "values (" + 1 + ",'" + 2 +", " + 3 + ", " + 4 + ")";
+
+                val = stmt.executeUpdate(QUERY);
+            }
+            
             return 1;
             
         } catch (SQLException e) {
