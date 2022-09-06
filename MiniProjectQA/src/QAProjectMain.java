@@ -30,11 +30,18 @@ public class QAProjectMain {
                 
                 String MainInPut = scanner.nextLine(); //MainInPut 메인 화면에서 입력받는 숫자
                 
+                if (MainInPut.equals("S") || MainInPut.equals("P") || MainInPut.equals("Q")){
+                    
+                } else{
+                    System.out.println("S, P, Q 중 하나를 입력해 주세요.");
+                    continue;
+                }
+
                 int val = 0;
                 
                 switch(MainInPut){
                     case "S":
-                        val = statics.StaticsFunction(stmt);
+                        val = statics.sumAnsFunction(stmt);
                         break;
                     case "P":
                         val = polls.PollFunction(stmt,stmt2);

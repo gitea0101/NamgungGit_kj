@@ -1,24 +1,43 @@
 import java.sql.*;
 
 public class QAProjectStatics {
-    public int StaticsFunction(Statement stmt){
-        System.out.println("통계");
-       
+    String QUERY = "select * from QAtable";
+    
+
+    public int StaticsFunction(Statement stmt) throws SQLException{
+        ResultSet rs = stmt.executeQuery(QUERY);
+        QUERY = "select * from QAtable";
         
        return 1;
     }
     public int printAllStastics() {
-        String QUERY = "select * from QAtable";
+        QUERY = "select * from QAtable";
 
         return 1;
 
     }
 
-    public int sumAnsFunction(){
-            String QUERY = "select * from QuestionN";
-
-            return 1;
+    public int sumAnsFunction(Statement stmt) throws SQLException{//답변의 합
+        ResultSet rs = stmt.executeQuery(QUERY);
+        QUERY = "SELECT QNUM " +
+                ",count(case when Anum=1  then 1 end) as A1 " +
+                ",count(case when Anum=2 then 1 end) as A2 " +
+                ",count(case when Anum=3 then 1 end) as A3 " +
+                "FROM qatable group by QNUM ";
+        
+        rs = stmt.executeQuery(QUERY);
+        while (rs.next()) {
+            // 데이터 타입, 갯수 일치
+            // Retrieve by column name
+            System.out.print("질문 번호 : " + rs.getInt("QNUM"));
+            System.out.print("   1번 : " + rs.getString("A1"));
+            System.out.print("   2번 : " + rs.getString("A2"));
+            System.out.println("   3번 : " + rs.getString("A3"));
         }
+        
+
+        return 1;
+     }
 
     
 

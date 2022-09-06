@@ -34,7 +34,13 @@ public class QAProjectPolls {
                         System.out.print( a + "." + rs2.getString("Answer") +" ");
                         a++;
                     }
+
+                    System.out.print("Q: 설문 종료");
+
                     Answer[n] = scanner.nextLine(); // 응답 변수
+                    if (Answer[n].equals("Q")){
+                        return 1;
+                    }
                     n=n+1;
                     }
                     
@@ -77,24 +83,32 @@ public class QAProjectPolls {
             while(rs2.next()){
                 n2++;
             }
-            
+
+            //QA 데이터 입력
+            QUERY = "select * from QAseq";
+            rs = stmt.executeQuery(QUERY);
 
             /* Count 함수를 써서 테이블 크기를 받는 방법?
             String QUERY3 = "Select Count(*) from QAtable";
             ResultSet rs3 = stmt.executeQuery(QUERY3);
             n2 = rs3.getInt("Count(*)");
             */
-
+            
             for(int i =0; i<4; i++){
                 QUERY2 = "Insert into QAtable (Qnum, Anum, QAnum) " +
-                        "values (" + (i+1) + "," + Answer[i] + "," + n2 + ")";
+                        "values (" + (i+1) + "," + Answer[i] + "," + n2 + ")"; // Answer
+
+                QUERY = "Insert into QAseq (UserNum, QANum) " +
+                "values (" + UserNum + ",'" + n2 + "')"; // Qa
+                
                 n2++;
-
                 val = stmt2.executeUpdate(QUERY2);
+                val = stmt.executeUpdate(QUERY);
+                
             }
-            //QA 데이터 입력
 
-
+            n2 = 1; // table 번호 변수 초기화
+            
             return 1;
             
         } catch (SQLException e) {
