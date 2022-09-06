@@ -20,6 +20,7 @@ public class QAProjectMain {
             Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
             // Mysql 새로운 query 생성
             Statement stmt = conn.createStatement();
+            Statement stmt2 = conn.createStatement();
             // Mysql 데이터 선택 (QUERY문 동작 확인후 입력)
             // ResultSet rs = stmt.executeQuery(QUERY);
             
@@ -36,7 +37,7 @@ public class QAProjectMain {
                         val = statics.StaticsFunction(stmt);
                         break;
                     case "P":
-                        val = polls.PollFunction(stmt);
+                        val = polls.PollFunction(stmt,stmt2);
                         break;
                     case "Q":
                         END = false;

@@ -3,17 +3,16 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
 
-import com.mysql.cj.Query;
 
 public class QAProjectPolls {
     Scanner scanner = new Scanner(System.in);
     
-    public int PollFunction(Statement stmt){
+    public int PollFunction(Statement stmt, Statement stmt2){
         try {
-            String QUERY = "select * from questionn";
+            String QUERY = "select * from QuestionN";
             String QUERY2 = "select * from AnswerN";
             ResultSet rs = stmt.executeQuery(QUERY);
-            ResultSet rs2 = stmt.executeQuery(QUERY2);
+            ResultSet rs2 = stmt2.executeQuery(QUERY2);
 
             System.out.println("이름을 입력해 주세요.");
             String UserName = scanner.nextLine(); // 유저 이름 변수
@@ -25,8 +24,6 @@ public class QAProjectPolls {
             String[] Answer = new String[4];
             
             while (rs.next()) {// 설문 응답 코드
-                // 데이터 타입, 갯수 일치
-                // Retrieve by column name
                 System.out.println("Qnum: " + rs.getString("Qnum"));
                 System.out.println(rs.getString("Question"));
                 while(rs2.next()){
@@ -43,12 +40,11 @@ public class QAProjectPolls {
             
             // UserNum 입력(이름이 없을때)
             QUERY2 = "Insert into User (UserNum, NAME)" +
-                            "values (" + n2 + ",'" + UserNum + "')";
+                    "values (" + UserNum + ",'" + UserName + "')";
             
-            rs2 = stmt.executeQuery(QUERY2);
+            rs2 = stmt2.executeQuery(QUERY2);
 
             while(rs2.next()){
-                n2++;
                 UserNum++;
             }
 
@@ -58,7 +54,7 @@ public class QAProjectPolls {
 
             //Answer 입력
             QUERY2 = "select * from answern";
-            rs2 = stmt.executeQuery(QUERY2);
+            rs2 = stmt2.executeQuery(QUERY2);
             
             while(rs2.next()){
                 n2++;
@@ -80,13 +76,7 @@ public class QAProjectPolls {
             }
             //QA 데이터 입력
 
-            for(int i =0; i<4; i++){
-                QUERY = "Insert into QA (QAnum, UserNum, Qnum, An) " +
-                        "values (" + 1 + ",'" + 2 +", " + 3 + ", " + 4 + ")";
 
-                val = stmt.executeUpdate(QUERY);
-            }
-            
             return 1;
             
         } catch (SQLException e) {
