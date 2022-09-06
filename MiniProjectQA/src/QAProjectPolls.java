@@ -22,57 +22,75 @@ public class QAProjectPolls {
             int n = 0; // 응답 번호 변수
             
             String[] Answer = new String[4];
-            
-            while (rs.next()) {// 설문 응답 코드
-                System.out.println("Qnum: " + rs.getString("Qnum"));
-                System.out.println(rs.getString("Question"));
-                while(rs2.next()){
+
+            try{
+                while (rs.next()) {// 설문 응답 코드
+                    System.out.println("Qnum: " + rs.getString("Qnum"));
+                    System.out.println(rs.getString("Question"));
+
+                    rs2 = stmt2.executeQuery(QUERY2);
                     int a = 1;
-                    System.out.print( a + "." + rs2.getString("Answer") +" ");
-                    a++;
+                    while(rs2.next()){
+                        System.out.print( a + "." + rs2.getString("Answer") +" ");
+                        a++;
+                    }
+                    Answer[n] = scanner.nextLine(); // 응답 변수
+                    n=n+1;
+                    }
+                    
+                    for(int i=0;i<4;i++){
+                       if (Integer.parseInt(Answer[i]) > 3 || Integer.parseInt(Answer[i]) < 1 ){
+                        throw new Exception();
+                       }
+
                 }
-                Answer[n] = scanner.nextLine(); // 응답 변수
-                n=n+1;
+            } catch(Exception e){
+                System.out.println("1,2,3 중 하나를 입력해 주세요.");
+                return 1;
             }
 
             // 설문 SQl 입력 코드
             int n2 = 1; // table 번호 변수 
             
-            // UserNum 입력(이름이 없을때)
-            QUERY2 = "Insert into User (UserNum, NAME)" +
-                    "values (" + UserNum + ",'" + UserName + "')";
             
+            
+            // UserNum 입력(이름이 없을때)
+            QUERY2 = "select * from User";
+
             rs2 = stmt2.executeQuery(QUERY2);
 
             while(rs2.next()){
                 UserNum++;
             }
 
-            int val = stmt.executeUpdate(QUERY);
+            QUERY2 = "Insert into User (UserNum, NAME) " +
+                    "values (" + UserNum + ",'" + UserName + "')";
+
+            int val = stmt2.executeUpdate(QUERY2);
             
             n2 = 1; // table 번호 변수 초기화
-
+            
             //Answer 입력
-            QUERY2 = "select * from answern";
+            QUERY2 = "select * from QAtable";
             rs2 = stmt2.executeQuery(QUERY2);
             
             while(rs2.next()){
                 n2++;
             }
-            val = stmt.executeUpdate(QUERY);
+            
 
             /* Count 함수를 써서 테이블 크기를 받는 방법?
-            String QUERY3 = "Select Count(*) from answern";
+            String QUERY3 = "Select Count(*) from QAtable";
             ResultSet rs3 = stmt.executeQuery(QUERY3);
             n2 = rs3.getInt("Count(*)");
             */
 
             for(int i =0; i<4; i++){
-                QUERY = "Insert into answern (Anum, An) " +
-                        "values (" + n2 + ",'" + Answer[i] + "')";
+                QUERY2 = "Insert into QAtable (Qnum, Anum, QAnum) " +
+                        "values (" + (i+1) + "," + Answer[i] + "," + n2 + ")";
                 n2++;
 
-                val = stmt.executeUpdate(QUERY);
+                val = stmt2.executeUpdate(QUERY2);
             }
             //QA 데이터 입력
 
