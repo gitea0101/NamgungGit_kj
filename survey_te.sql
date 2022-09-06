@@ -1,0 +1,45 @@
+
+CREATE TABLE Answer
+(
+  ANum   INT          NOT NULL COMMENT '답변번호',
+  Answer VARCHAR(200) NULL     COMMENT '답변',
+  PRIMARY KEY (ANum)
+);
+
+CREATE TABLE QA
+(
+  UserNum INT NOT NULL COMMENT '사용자번호',
+  Qnum    INT NOT NULL COMMENT '질문번호',
+  ANum    INT NOT NULL COMMENT '답변번호',
+  QAnum   INT NOT NULL COMMENT '결과값',
+  PRIMARY KEY (QAnum)
+) COMMENT '설문';
+
+CREATE TABLE QNum
+(
+  Qnum     INT          NOT NULL COMMENT '질문번호',
+  Question VARCHAR(200) NOT NULL COMMENT '질문',
+  PRIMARY KEY (Qnum)
+) COMMENT '문항인수';
+
+CREATE TABLE UserID
+(
+  UserNum INT          NOT NULL COMMENT '사용자번호',
+  Name    VARCHAR(200) NULL     COMMENT '이름',
+  PRIMARY KEY (UserNum)
+) COMMENT '사용자명';
+
+ALTER TABLE QA
+  ADD CONSTRAINT FK_UserID_TO_QA
+    FOREIGN KEY (UserNum)
+    REFERENCES UserID (UserNum);
+
+ALTER TABLE QA
+  ADD CONSTRAINT FK_QNum_TO_QA
+    FOREIGN KEY (Qnum)
+    REFERENCES QNum (Qnum);
+
+ALTER TABLE QA
+  ADD CONSTRAINT FK_Answer_TO_QA
+    FOREIGN KEY (ANum)
+    REFERENCES Answer (ANum);

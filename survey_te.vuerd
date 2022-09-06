@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -255.9999999999999,
-    "scrollLeft": -110.3999999999999,
+    "scrollTop": -196.79999999999978,
+    "scrollLeft": -152.79999999999993,
     "zoomLevel": 0.8,
     "show": {
       "tableComment": true,
@@ -48,7 +48,7 @@
         "columns": [
           {
             "name": "Qnum",
-            "comment": "",
+            "comment": "질문번호",
             "dataType": "INT",
             "default": "",
             "option": {
@@ -71,7 +71,7 @@
           },
           {
             "name": "Question",
-            "comment": "",
+            "comment": "질문",
             "dataType": "VARCHAR(200)",
             "default": "",
             "option": {
@@ -97,7 +97,7 @@
           "active": false,
           "left": 88.8,
           "top": 100.8,
-          "zIndex": 1,
+          "zIndex": 25,
           "widthName": 60,
           "widthComment": 60
         },
@@ -110,7 +110,7 @@
         "columns": [
           {
             "name": "UserNum",
-            "comment": "",
+            "comment": "사용자번호",
             "dataType": "INT",
             "default": "",
             "option": {
@@ -125,7 +125,7 @@
               "fk": false,
               "pfk": false,
               "widthName": 60,
-              "widthComment": 60,
+              "widthComment": 67,
               "widthDataType": 60,
               "widthDefault": 60
             },
@@ -133,7 +133,7 @@
           },
           {
             "name": "Name",
-            "comment": "",
+            "comment": "이름",
             "dataType": "VARCHAR(200)",
             "default": "",
             "option": {
@@ -159,7 +159,7 @@
           "active": false,
           "left": 82.8,
           "top": 432.4,
-          "zIndex": 32,
+          "zIndex": 29,
           "widthName": 60,
           "widthComment": 60
         },
@@ -172,7 +172,7 @@
         "columns": [
           {
             "name": "UserNum",
-            "comment": "",
+            "comment": "사용자번호",
             "dataType": "INT",
             "default": "",
             "option": {
@@ -187,7 +187,7 @@
               "fk": true,
               "pfk": false,
               "widthName": 60,
-              "widthComment": 60,
+              "widthComment": 67,
               "widthDataType": 60,
               "widthDefault": 60
             },
@@ -195,7 +195,7 @@
           },
           {
             "name": "Qnum",
-            "comment": "",
+            "comment": "질문번호",
             "dataType": "INT",
             "default": "",
             "option": {
@@ -217,9 +217,9 @@
             "id": "f08ad847-fde9-447c-9aba-85162c579ce3"
           },
           {
-            "name": "An",
-            "comment": "",
-            "dataType": "VARCHAR(200)",
+            "name": "ANum",
+            "comment": "답변번호",
+            "dataType": "INT",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -234,31 +234,15 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 60,
-              "widthDataType": 89.29296875,
+              "widthDataType": 60,
               "widthDefault": 60
             },
             "id": "629a9ee5-b3fa-48b0-9fc2-461575a6d302"
-          }
-        ],
-        "ui": {
-          "active": false,
-          "left": 701.2,
-          "top": 238.8,
-          "zIndex": 26,
-          "widthName": 60,
-          "widthComment": 60
-        },
-        "visible": true,
-        "id": "12304998-fc2d-4228-8195-20c3f4b03953"
-      },
-      {
-        "name": "Answer",
-        "comment": "",
-        "columns": [
+          },
           {
-            "name": "ANum",
-            "comment": "",
-            "dataType": "VARCHAR(200)",
+            "name": "QAnum",
+            "comment": "결과값",
+            "dataType": "INT",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -273,14 +257,53 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 60,
-              "widthDataType": 89.29296875,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "616036ca-2a59-40a8-9ce6-8ce7a50c5b06"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 701.2,
+          "top": 238.8,
+          "zIndex": 39,
+          "widthName": 60,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "12304998-fc2d-4228-8195-20c3f4b03953"
+      },
+      {
+        "name": "Answer",
+        "comment": "",
+        "columns": [
+          {
+            "name": "ANum",
+            "comment": "답변번호",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
               "widthDefault": 60
             },
             "id": "a020bfb5-915e-419b-9ae3-4f8e4a16cddc"
           },
           {
             "name": "Answer",
-            "comment": "",
+            "comment": "답변",
             "dataType": "VARCHAR(200)",
             "default": "",
             "option": {
@@ -306,7 +329,7 @@
           "active": false,
           "left": 743.2,
           "top": 508.4,
-          "zIndex": 4,
+          "zIndex": 43,
           "widthName": 60,
           "widthComment": 60
         },
@@ -330,7 +353,7 @@
           "columnIds": [
             "b5e58546-538b-492e-bffa-c6c749df0c50"
           ],
-          "x": 459.09296875,
+          "x": 466.09296875,
           "y": 487.4,
           "direction": "right"
         },
@@ -340,7 +363,7 @@
             "932477d1-d031-4982-aa01-c86b023d922b"
           ],
           "x": 701.2,
-          "y": 336.675,
+          "y": 352.05,
           "direction": "left"
         },
         "constraintName": "fk_userid_to_qa",
@@ -366,7 +389,7 @@
             "f08ad847-fde9-447c-9aba-85162c579ce3"
           ],
           "x": 701.2,
-          "y": 271.425,
+          "y": 276.55,
           "direction": "left"
         },
         "constraintName": "fk_qnum_to_qa",
@@ -391,8 +414,8 @@
           "columnIds": [
             "629a9ee5-b3fa-48b0-9fc2-461575a6d302"
           ],
-          "x": 889.346484375,
-          "y": 369.3,
+          "x": 878.2,
+          "y": 389.8,
           "direction": "bottom"
         },
         "constraintName": "fk_a_to_qa",
