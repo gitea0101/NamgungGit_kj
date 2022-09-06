@@ -33,7 +33,7 @@ public class QAProjectMain {
                 
                 switch(MainInPut){
                     case "S":
-                        val = statics.StaticsFunction();
+                        val = statics.StaticsFunction(stmt);
                         break;
                     case "P":
                         val = polls.PollFunction(stmt);
